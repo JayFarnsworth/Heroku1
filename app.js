@@ -1,9 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-
 const app = express();
 app.use(cors());
-
 const data = [
     {id: 1,
     cohortName: "17-01-WD-DP",
@@ -29,7 +27,6 @@ const data = [
 app.get("/", function (request, response) {
     response.json({data});
 });
-
 function takeId(data, id) {
   for (let i=0;i<data.length;i++) {
     if (data[i].id == id) {
@@ -38,7 +35,6 @@ function takeId(data, id) {
   }
   return null;
 }
-
 app.get("/:id", function (request, response) {
   var record = takeId(data, request.params.id);
   if (!record) {
@@ -51,7 +47,4 @@ app.get("/:id", function (request, response) {
   }
   response.json({data: record});
 });
-
-
-
 app.listen(process.env.PORT || 3000)
