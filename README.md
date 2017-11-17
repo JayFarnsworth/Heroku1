@@ -52,4 +52,4 @@ Your returned error should look like this:
     }
 }
 ```
-link to deployed heroku https://dashboard.heroku.com/apps/intense-dawn-97241
+link to deployed heroku https://intense-dawn-97241.herokuapp.com/
